@@ -1,6 +1,6 @@
 while True:
     count = 0
-    while True and count <= 3:
+    while True and count < 3:
         count += 1
         age = (input("Enter age: "))
         if age.isdigit():
@@ -8,7 +8,9 @@ while True:
             break
         else:
             print("Input Valid Numebers only!")
-        
+    if count == 3:
+        print("You've reached the maximum attempts.")
+        break  
     has_license = input("Do you have a driver's license? (Yes/No): ").strip().lower()
     has_license = True if has_license == "yes" else False if has_license == "no" else None
 
